@@ -1,6 +1,6 @@
 # blogChat-backend 🚀📝
 
-A robust backend service designed to correct and generate content for a social media application. This project leverages advanced natural language processing to ensure high-quality, relevant, and engaging content for users. It is already integrated with the [Node-Blog-App e-learning application](https://github.com/YUGESHKARAN/Node-Blog-App.git), providing automated content correction, generation, and moderation for educational and social features.
+A robust backend service designed to correct and generate content for a social media application. This project leverages advanced natural language processing to ensure high-quality, relevant, and engaging content for users. It is already integrated with the [Tech-Community-App e-learning application](https://github.com/YUGESHKARAN/Node-Blog-App.git), providing automated content correction, generation, and moderation for educational and social features.
 
 ---
 
