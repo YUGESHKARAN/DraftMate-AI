@@ -84,10 +84,6 @@ WRITING GUIDELINES:
 
 --------------------------------------------------
 
-Chat History:
-{chat_history}
-
---------------------------------------------------
 
 User Post Description:
 {description}
