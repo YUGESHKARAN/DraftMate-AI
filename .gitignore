@@ -1,3 +1,5 @@
 .env
 chat
 vercel.json
+
+__pycache__

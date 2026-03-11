@@ -6,3 +6,6 @@ langchain_groq
 langsmith
 # groq
 # openai 
+
+Flask-Limiter
+PyJWT
