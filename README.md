@@ -1,26 +1,26 @@
-# blogChat-backend 🚀📝
+# DraftMate AI
 
-A robust backend service designed to correct and generate content for a social media application. This project leverages advanced natural language processing to ensure high-quality, relevant, and engaging content for users. It is already integrated with the [Tech-Community-App e-learning application](https://github.com/YUGESHKARAN/Node-Blog-App.git), providing automated content correction, generation, and moderation for educational and social features.
+A robust backend service designed to correct and generate content for a social media application. This project leverages advanced natural language processing to ensure high-quality, relevant, and engaging content for users. It is already integrated with the [Tech-Community-App](https://github.com/YUGESHKARAN/Node-Blog-App.git) e-learning platform, providing automated content correction, generation, and moderation for educational and social features.
 
 ---
 
-## Features ✨
+## Features 
 
-- **Content Correction** 🛠️: Automatically reviews and corrects grammar, spelling, and style in user-generated content.
-- **Content Generation** 🤖: Generates engaging posts, comments, and learning materials for social interactions.
-- **Integration-Ready** 🔗: Easily connects with existing applications—already integrated with the Node-Blog-App e-learning platform.
-- **Moderation Tools** 🛡️: Detects and filters inappropriate or harmful content to ensure a safe community environment.
-- **API Driven** 🌐: Provides RESTful endpoints for seamless integration and automation.
+- **Content Correction**: Automatically reviews and corrects grammar, spelling, and style in user-generated content.
+- **Content Generation**: Generates engaging posts, comments, and learning materials for social interactions.
+- **Integration-Ready**: Easily connects with existing applications—already integrated with the Tech. Community App e-learning platform.
+- **Moderation Tools**: Detects and filters inappropriate or harmful content to ensure a safe community environment.
+- **API Driven**: Provides RESTful endpoints for seamless integration and automation.
 
-## Getting Started 🚦
+## Getting Started 
 
-### Prerequisites 📋
+### Prerequisites 
 
 - [Node.js](https://nodejs.org/) (v16+ recommended)
 - [npm](https://www.npmjs.com/) or [yarn](https://yarnpkg.com/)
 - MongoDB or compatible database (if required by your configuration)
 
-### Installation 🛠️
+### Installation
 
 1. **Clone the repository:**
    ```bash
@@ -49,37 +49,35 @@ A robust backend service designed to correct and generate content for a social m
    yarn start
    ```
 
-## Usage 📡
+## Usage
 
 - The backend can be used as a standalone service or as a microservice within a larger application.
 
-### Integration Example 🔄
+### Integration Example
 
-The backend is already integrated with the [Node-Blog-App](https://github.com/YUGESHKARAN/Node-Blog-App.git), an e-learning and blogging platform. Use this as a reference for integrating with your own apps.
+The backend is already integrated with the [Tech-Community-App](https://github.com/YUGESHKARAN/Node-Blog-App.git), an e-learning platform. Use this as a reference for integrating with your own apps.
 
-## API Overview 📑
+## API Overview
 
 - **GET /**  
-  Retrieves _{"message": "Welcome to the Blog Content Generator API!"}_.
+  Retrieves _{"message": "Welcome to the DraftMate AI!"}_.
 
 - **POST /generate-content**  
   Transforms the given draft into professional post content.
 
 
 
-## Contributing 🤝
+## Contributing 
 
 Contributions are welcome! Open an issue or submit a pull request to help improve this project.
 
-## License 📝
+## License
 
 This project is licensed under the MIT License.
 
-## Contact 📬
+## Contact
 
 - **Author:** [YUGESHKARAN](https://github.com/YUGESHKARAN)
-- **Related Project:** [Node-Blog-App](https://github.com/YUGESHKARAN/Node-Blog-App.git)
+- **Related Project:** [Tech-Community-App](https://github.com/YUGESHKARAN/Node-Blog-App.git)
 
 ---
-
-> _Empowering social learning with intelligent content management._ 🌟
