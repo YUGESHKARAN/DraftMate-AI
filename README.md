@@ -75,9 +75,4 @@ Contributions are welcome! Open an issue or submit a pull request to help improv
 
 This project is licensed under the MIT License.
 
-## Contact
-
-- **Author:** [YUGESHKARAN](https://github.com/YUGESHKARAN)
-- **Related Project:** [Tech-Community-App](https://github.com/YUGESHKARAN/Node-Blog-App.git)
-
 ---
