@@ -102,7 +102,7 @@ prompt = ChatPromptTemplate.from_template(template)
 @limiter.limit("20 per minute")
 @token_required
 def welcome():
-    return jsonify({"message":"welcome to chat backend content manipulator"})
+    return jsonify({"message":"Welcome to the DraftMate AI!"})
 
 @app.route("/enhance-content", methods=['POST'])
 @limiter.limit("20 per minute")
