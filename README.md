@@ -1,6 +1,6 @@
 # DraftMate AI
 
-A content co-worker for the [Tech-Community-App](https://github.com/YUGESHKARAN/Node-Blog-App.git), designed to refine post content into a standardized format before upload. 
+- A content co-worker for the [Tech-Community-App](https://github.com/YUGESHKARAN/Node-Blog-App.git), designed to refine post content into a standardized format before upload. 
 ---
 
 ## Features 
