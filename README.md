@@ -60,7 +60,7 @@ The backend is already integrated with the [Tech-Community-App](https://github.c
 - **GET /**  
   Retrieves _{"message": "Welcome to the DraftMate AI!"}_.
 
-- **POST /generate-content**  
+- **POST /enhance-content**  
   Transforms the given draft into professional post content.
 
 
