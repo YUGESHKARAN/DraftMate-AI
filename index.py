@@ -100,7 +100,6 @@ prompt = ChatPromptTemplate.from_template(template)
 
 @app.route("/")
 @limiter.limit("20 per minute")
-@token_required
 def welcome():
     return jsonify({"message":"Welcome to the DraftMate AI!"})
 
