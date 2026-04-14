@@ -1,16 +1,14 @@
 # DraftMate AI
 
-A robust backend service designed to correct and generate content for a social media application. This project leverages advanced natural language processing to ensure high-quality, relevant, and engaging content for users. It is already integrated with the [Tech-Community-App](https://github.com/YUGESHKARAN/Node-Blog-App.git) e-learning platform, providing automated content correction, generation, and moderation for educational and social features.
-
+- A content co-worker for the [Tech-Community-App](https://github.com/YUGESHKARAN/Node-Blog-App.git), designed to refine post content into a standardized format before upload. 
 ---
 
 ## Features 
 
-- **Content Correction**: Automatically reviews and corrects grammar, spelling, and style in user-generated content.
-- **Content Generation**: Generates engaging posts, comments, and learning materials for social interactions.
-- **Integration-Ready**: Easily connects with existing applications—already integrated with the Tech. Community App e-learning platform.
-- **Moderation Tools**: Detects and filters inappropriate or harmful content to ensure a safe community environment.
-- **API Driven**: Provides RESTful endpoints for seamless integration and automation.
+- **Content Refining**: Reviews and corrects content to standardized format.
+- **Production Guardraile**: Implemented Input/Output system level guardrails to prevent prompt injections, model abuse and data level security threats.
+- **CORS support**: Uses CORS to prevent security threats under browser level.
+- **API Rate-Limiting**: Serving RESTful endpoints with rate limiting to prevent api abuse.
 
 ## Getting Started 
 
@@ -62,7 +60,7 @@ The backend is already integrated with the [Tech-Community-App](https://github.c
 - **GET /**  
   Retrieves _{"message": "Welcome to the DraftMate AI!"}_.
 
-- **POST /generate-content**  
+- **POST /enhance-content**  
   Transforms the given draft into professional post content.
 
 
@@ -74,10 +72,5 @@ Contributions are welcome! Open an issue or submit a pull request to help improv
 ## License
 
 This project is licensed under the MIT License.
-
-## Contact
-
-- **Author:** [YUGESHKARAN](https://github.com/YUGESHKARAN)
-- **Related Project:** [Tech-Community-App](https://github.com/YUGESHKARAN/Node-Blog-App.git)
 
 ---
