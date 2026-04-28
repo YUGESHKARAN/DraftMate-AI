@@ -61,7 +61,11 @@ The backend is already integrated with the [Tech-Community-App](https://github.c
   Retrieves _{"message": "Welcome to the DraftMate AI!"}_.
 
 - **POST /enhance-content**  
-  Transforms the given draft into professional post content.
+ ```json
+{
+  "description":"developed a crewai agent called mentor consulting crew. it is a crew of 3 different agents that will research and build a resources to learn the specific domain from beginners to advanced level with github links and youtube tutorials with structured time table "
+}
+```
 
 
 
