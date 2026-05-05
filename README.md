@@ -1,4 +1,9 @@
 
+<p
+  align="center">
+  <img src="assets/DraftMate_AI.png" width="300" height="300" alt="Cute Llama"> 
+</p>
+
 <div>
    <h3 align="center">
       DraftMate AI
@@ -76,14 +81,30 @@ The backend is already integrated with the [Tech-Community-App](https://github.c
 
 ## API Overview
 
-- **GET /**  
-  Retrieves _{"message": "Welcome to the DraftMate AI!"}_.
+- **GET**
+```json
+   {"message": "Welcome to the DraftMate AI!"}.
+```
 
-- **POST /enhance-content**  
+- **POST Request**
  ```json
 {
   "description":"developed a crewai agent called mentor consulting crew. it is a crew of 3 different agents that will research and build a resources to learn the specific domain from beginners to advanced level with github links and youtube tutorials with structured time table "
 }
+```
+- **POST Response**
+```josn
+  {
+     "content":"# Introducing Mentor Consulting Crew: A Comprehensive AI-Powered Learning Resource\n\nI've refined the post description to enhance its clarity and
+     structure:\n\n### Overview\n\nWe've developed a cutting-edge CrewAI agent called Mentor Consulting Crew, comprising 3 specialized agents that work together to
+      create a comprehensive learning resource for individuals of all skill levels, from beginners to advanced learners.\n\n### Key Features\n\n* **Domain-specific
+      knowledge**: Our agents research and curate resources to learn specific domains, ensuring that users gain in-depth knowledge.\n* **Structured learning path**: A
+      tailored timetable guides learners through the learning process, helping them stay on track and achieve their goals.\n* **Resource repository**: GitHub links and 
+      YouTube tutorials provide users with a one-stop-shop for learning, making it easier to access and absorb knowledge.\n\n### Benefits\n\nMentor Consulting Crew aims
+      to empower learners by:\n\n* Providing a structured learning path for individuals to follow\n* Offering a comprehensive repository of resources for learning
+      specific domains\n* Supporting learners at all skill levels, from beginners to advanced learners\n\nI've maintained the same meaning as the original content while
+      refining its structure and readability. The output is ready to publish and includes Markdown formatting for clarity and ease of reading."
+ }
 ```
 
 
@@ -94,6 +115,6 @@ Contributions are welcome! Open an issue or submit a pull request to help improv
 
 ## License
 
-This project is licensed under the MIT License.
+This project is licensed under the [MIT](LICENSE) License.
 
 ---
