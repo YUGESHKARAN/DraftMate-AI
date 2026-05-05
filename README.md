@@ -49,7 +49,6 @@ A content co-worker for the [Tech-Community-App](https://github.com/YUGESHKARAN/
    ```
 
 3. Configure Environment Variables:
-   - Copy `.env.example` to `.env` (if available) or create a new `.env` file.
    - You **must** set the following required environment variable:
      ```env
 
