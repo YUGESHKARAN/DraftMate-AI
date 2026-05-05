@@ -27,16 +27,16 @@ A content co-worker for the [Tech-Community-App](https://github.com/YUGESHKARAN/
 
 ---
 
-## Features 
+### Features 
 
 - **Content Refining**: Reviews and corrects content to standardized format.
 - **Production Guardraile**: Implemented Input/Output system level guardrails to prevent prompt injections, model abuse and data level security threats.
 - **CORS support**: Uses CORS to prevent security threats under browser level.
 - **API Rate-Limiting**: Serving RESTful endpoints with rate limiting to prevent api abuse.
 
-## Getting Started 
+### Getting Started 
 
-### Prerequisites 
+**Prerequisites** 
 
 - [Node.js](https://nodejs.org/) (v16+ recommended)
 - [npm](https://www.npmjs.com/) or [yarn](https://yarnpkg.com/)
@@ -72,15 +72,12 @@ A content co-worker for the [Tech-Community-App](https://github.com/YUGESHKARAN/
       python index.py
    ```
 
-## Usage
+### Usage
 
 - The backend can be used as a standalone service or as a microservice within a larger application.
 
-### Integration Example
 
-The backend is already integrated with the [Tech-Community-App](https://github.com/YUGESHKARAN/Node-Blog-App.git), an e-learning platform. Use this as a reference for integrating with your own apps.
-
-## API Overview
+### API Overview
 
 - GET
   http://localhost:5000
@@ -112,11 +109,11 @@ The backend is already integrated with the [Tech-Community-App](https://github.c
 
 
 
-## Contributing 
+### Contributing 
 
 Contributions are welcome! Open an issue or submit a pull request to help improve this project.
 
-## License
+### License
 
 This project is licensed under the [MIT](LICENSE) License.
 
