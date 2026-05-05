@@ -49,15 +49,15 @@ A content co-worker for the [Tech-Community-App](https://github.com/YUGESHKARAN/
    ```
 
 3. Configure Environment Variables:
-   - You **must** set the following required environment variable:
-     ```env
+   You **must** set the following required environment variable:
+   ```env
 
      # Model API
      GROQ_API_KEY=your-groq-api-key-here
 
      # Authentication key for auth-middleware
      JWT_SECRET=your-jwt-hashKey 
-     ```
+   ```
 
 4. Start the server:
    ```bash
