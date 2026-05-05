@@ -39,8 +39,8 @@ A content co-worker for the [Tech-Community-App](https://github.com/YUGESHKARAN/
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/YUGESHKARAN/blogChat-backend.git
-   cd blogChat-backend
+   git clone https://github.com/YUGESHKARAN/DraftMate-AI.git
+   cd DraftMate-AI
    ```
 
 2. Install dependencies:
@@ -75,7 +75,7 @@ A content co-worker for the [Tech-Community-App](https://github.com/YUGESHKARAN/
 - GET
   http://localhost:5000
 ```json
-   {"message": "Welcome to the DraftMate AI!"}.
+   {"message": "Welcome to the DraftMate AI!"}
 ```
 
 - POST Request
