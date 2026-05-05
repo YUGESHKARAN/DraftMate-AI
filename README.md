@@ -34,13 +34,6 @@ A content co-worker for the [Tech-Community-App](https://github.com/YUGESHKARAN/
 - **CORS support**: Uses CORS to prevent security threats under browser level.
 - **API Rate-Limiting**: Serving RESTful endpoints with rate limiting to prevent api abuse.
 
-### Getting Started 
-
-**Prerequisites** 
-
-- [Node.js](https://nodejs.org/) (v16+ recommended)
-- [npm](https://www.npmjs.com/) or [yarn](https://yarnpkg.com/)
-- MongoDB or compatible database (if required by your configuration)
 
 ### Installation
 
