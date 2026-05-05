@@ -12,14 +12,14 @@
 
 <div align="center">
    
-![License](https://img.shields.io/badge/license-MIT-brightgreen)
-![GitHub forks](https://img.shields.io/github/forks/YUGESHKARAN/DraftMate-AI)
-![Python version](https://img.shields.io/badge/python-3.8%2B-blue)
-![Last commit](https://img.shields.io/github/last-commit/YUGESHKARAN/DraftMate-AI)
-![Contributors](https://img.shields.io/github/contributors/YUGESHKARAN/DraftMate-AI)
-![Issues](https://img.shields.io/github/issues/YUGESHKARAN/DraftMate-AI)
+[![License](https://img.shields.io/badge/license-MIT-brightgreen)](LICENSE)
+[![GitHub forks](https://img.shields.io/github/forks/YUGESHKARAN/DraftMate-AI)](https://github.com/YUGESHKARAN/DraftMate-AI/network/members)
+[![Python version](https://img.shields.io/badge/python-3.8%2B-blue)](https://www.python.org/downloads/)
+[![Last commit](https://img.shields.io/github/last-commit/YUGESHKARAN/DraftMate-AI)](https://github.com/YUGESHKARAN/DraftMate-AI/commits)
+[![Contributors](https://img.shields.io/github/contributors/YUGESHKARAN/DraftMate-AI)](https://github.com/YUGESHKARAN/DraftMate-AI/graphs/contributors)
+[![Issues](https://img.shields.io/github/issues/YUGESHKARAN/DraftMate-AI)](https://github.com/YUGESHKARAN/DraftMate-AI/issues)
 [![Closed Issues](https://img.shields.io/github/issues-closed/YUGESHKARAN/DraftMate-AI)](https://github.com/YUGESHKARAN/DraftMate-AI/issues?q=is%3Aissue+is%3Aclosed)
-![Pull requests](https://img.shields.io/github/issues-pr/YUGESHKARAN/DraftMate-AI)
+[![Pull requests](https://img.shields.io/github/issues-pr/YUGESHKARAN/DraftMate-AI)](https://github.com/YUGESHKARAN/DraftMate-AI/pulls)
 [![Closed PRs](https://img.shields.io/github/issues-pr-closed/YUGESHKARAN/DraftMate-AI)](https://github.com/YUGESHKARAN/DraftMate-AI/pulls?q=is%3Apr+is%3Aclosed)
 </div>
 
