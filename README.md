@@ -44,31 +44,32 @@ A content co-worker for the [Tech-Community-App](https://github.com/YUGESHKARAN/
 
 ### Installation
 
-1. **Clone the repository:**
+1. Clone the repository:
    ```bash
    git clone https://github.com/YUGESHKARAN/blogChat-backend.git
    cd blogChat-backend
    ```
 
-2. **Install dependencies:**
-   ```bash
-   npm install
-   # or
-   yarn install
+2. Install dependencies:
+   ```
+   pip install -r requirements.txt
    ```
 
-3. **Configure Environment Variables:**
+3. Configure Environment Variables:
    - Copy `.env.example` to `.env` (if available) or create a new `.env` file.
    - You **must** set the following required environment variable:
-     ```
+     ```env
+
+     # Model API
      GROQ_API_KEY=your-groq-api-key-here
+
+     # Authentication key for auth-middleware
+     JWT_SECRET=your-jwt-hashKey 
      ```
 
-4. **Start the server:**
+4. Start the server:
    ```bash
-   npm start
-   # or
-   yarn start
+      python index.py
    ```
 
 ## Usage
@@ -81,12 +82,14 @@ The backend is already integrated with the [Tech-Community-App](https://github.c
 
 ## API Overview
 
-- **GET**
+- GET
+  http://localhost:5000
 ```json
    {"message": "Welcome to the DraftMate AI!"}.
 ```
 
-- **POST Request**
+- POST Request
+  http://localhost:5000/enhance-content
  ```json
 {
   "description":"developed a crewai agent called mentor consulting crew. it is a crew of 3 different agents that will research and build a resources to learn the specific domain from beginners to advanced level with github links and youtube tutorials with structured time table "
