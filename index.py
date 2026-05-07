@@ -112,7 +112,7 @@ def generate_content():
         description = data.get("description","")
 
         if len(description) > int(MAX_QUERY_LENGTH):
-            return jsonify({"content":"query limit exceed, keep context limit maximum of 700 words."}), 200
+            return jsonify({"content":"query limit exceed, keep context limit maximum of 1200 words."}), 200
 
         if not is_valid_post_description(description):
             return jsonify({
