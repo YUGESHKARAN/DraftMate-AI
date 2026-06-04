@@ -23,7 +23,7 @@
 [![Closed PRs](https://img.shields.io/github/issues-pr-closed/YUGESHKARAN/DraftMate-AI)](https://github.com/YUGESHKARAN/DraftMate-AI/pulls?q=is%3Apr+is%3Aclosed)
 </div>
 
-A content co-worker for the [Tech-Community-App](https://github.com/YUGESHKARAN/Node-Blog-App.git), designed to refine post content into a standardized format before upload. 
+A content co-worker for the [Tech-Community-App](https://github.com/YUGESHKARAN/Node-Blog-App.git), designed to refine post content into a standardized Markdown format before upload. 
 
 ---
 
