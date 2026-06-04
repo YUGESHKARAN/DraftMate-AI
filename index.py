@@ -26,8 +26,8 @@ MAX_QUERY_LENGTH = os.getenv('MAX_QUERY_LENGTH')
 frontend_url = os.getenv('FRONTEND_END_URL')
 
 CORS(app, resources={
-    r"/": {"origins": [frontend_url,'https://blog-frontend-teal-ten.vercel.app',"http://localhost:5173"]},
-    r"/enhance-content": {"origins": [frontend_url, 'https://blog-frontend-teal-ten.vercel.app',"http://localhost:5173"]}
+    r"/": {"origins": [frontend_url,"https://blog-frontend-teal-ten.vercel.app","http://localhost:5173"]},
+    r"/enhance-content": {"origins": [frontend_url, "https://blog-frontend-teal-ten.vercel.app","http://localhost:5173"]}
 })
 
 client = Client()
