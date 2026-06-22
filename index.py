@@ -198,12 +198,6 @@ Example:
 - Optimizations
 - Findings
 
-## Resources
-Note: 
-1. Never create links that were not provided.
-2. Resources mentioned without links just mention it's name in the resource section, do not create the links for it.
-
-Convert only URLs eg. https://... into Markdown links ONLY if URLs are present in the original content. you can refere the github markdown format for embed links.
 
 
 ## Conclusion
