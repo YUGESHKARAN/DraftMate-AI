@@ -250,18 +250,8 @@ LINK RULES
 If the original content contains URLs:
 
 Convert them into Markdown links.
-
-Example:
-
-Raw:
-https://github.com/user/project
-
-Output:
-[GitHub Repository](https://github.com/user/project)
-
-If no URL exists:
-
-Do not create a Resources section.
+Note:
+ 1. If no URL provided by the user, do not create a Resources section.
 
 ==================================================
 STYLE RULES
@@ -511,5 +501,5 @@ def generate_content():
 
 
 if __name__ =="__main__":
-    app.run(host="0.0.0.0", debug=False)
+    app.run(host="0.0.0.0", debug=True)
 
