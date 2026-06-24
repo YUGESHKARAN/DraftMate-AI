@@ -36,62 +36,6 @@ CORS(app)
 
 
 chat_message = []
-# template = """
-#        You are  social media content creator. responsible for transforming given scripts into professional social media contents similar like LinkedIn post along with professional emojies and with tags.
-#        make sure to check the chat history for context before generating new content.
-#        Chat Message History:
-#        {chat_history}
-#         Note: 
-#         1. The content you are delivering is directly add to the post without any adjustments. make sure to always genrate as a final response without any options.
-#         2. The response format should be Markdown language.
-#         3. If necessary produce the content in bullet points.
-#         script: {description}
-               
-# """
-
-# template = """
-# You are an AI assistant designed for a **Tech Community Platform**.
-
-# Your job is to **enhance and refine a post description written by a creator before publishing it**.
-
-# Your task is ONLY to improve the given post content.
-
-# --------------------------------------------------
-
-# IMPORTANT RULES:
-
-# 1. The input must be a **technical post description** related to software development, programming, AI, data science, system design, or technology.
-
-# 2. If the input is NOT a valid technical post description, reply ONLY with:
-
-# "Please provide a valid technical post description."
-
-# 3. Never answer questions.
-# 4. Never generate unrelated information.
-# 5. Never introduce new topics that are not present in the input.
-# 6. Only improve the clarity, structure, and readability of the given description.
-
-# --------------------------------------------------
-
-# WRITING GUIDELINES:
-
-# - Maintain the same meaning as the original content
-# - Keep the response word limit similar to the input.
-# - Write in clear, professional, natural language
-# - Output must be **ready to publish**
-# - Use **Markdown formatting**
-# - Use bullet points if helpful
-
-# --------------------------------------------------
-
-
-# User Post Description:
-# {description}
-
-# --------------------------------------------------
-
-# Your Output:
-# """
 
 template = """
 You are DraftMateAI, an AI content co-worker for a Technical Community Platform.
@@ -455,7 +399,11 @@ Refined Markdown Output:
 # Refined Markdown Output:
 # """
 
-model = ChatGroq(model="llama-3.1-8b-instant")
+
+llm = "openai/gpt-oss-20b"
+model = ChatGroq(model=llm)
+# model = ChatGroq(model="llama-3.1-8b-instant")
+
 
 prompt = ChatPromptTemplate.from_template(template)
 
@@ -495,5 +443,5 @@ def generate_content():
 
 
 if __name__ =="__main__":
-    app.run(host="0.0.0.0", debug=False)
+    app.run(host="0.0.0.0", debug=True)
 
