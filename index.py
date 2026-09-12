@@ -27,7 +27,7 @@ limiter = Limiter(
     default_limits=["100 per hour"]
 )
 
-MAX_QUERY_LENGTH = os.getenv('MAX_QUERY_LENGTH')
+MAX_QUERY_LENGTH = os.getenv('MAX_QUERY_LENGTH', 2500)
 frontend_url = os.getenv('FRONTEND_END_URL')
 
 CORS(app, resources={
