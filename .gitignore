@@ -1,5 +1,5 @@
 .env
 chat
 vercel.json
-
+.draftmate
 __pycache__

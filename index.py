@@ -1,9 +1,10 @@
 import os
-from flask import Flask, request, jsonify
+from flask import Flask, request, jsonify, g
 from flask_cors import CORS
 from flask_limiter import Limiter
 from flask_limiter.util import get_remote_address
 from middleware.auth_token import token_required
+
 
 from langchain_groq import ChatGroq
 from langchain_core.prompts import ChatPromptTemplate
@@ -12,6 +13,10 @@ from langchain_core.output_parsers import StrOutputParser
 from langsmith import Client
 from dotenv import load_dotenv
 from config.input_guardrail import is_valid_post_description
+
+import json
+import redis
+
 load_dotenv()
 
 app = Flask(__name__)
@@ -232,38 +237,92 @@ prompt = ChatPromptTemplate.from_template(template)
 def welcome():
     return jsonify({"message":"Welcome to the DraftMate AI!"})
 
+# @app.route("/enhance-content", methods=['POST'])
+# @limiter.limit("20 per minute")
+# @token_required
+# def generate_content():
+#     global chat_message
+#     try:
+#         data = request.json
+#         description = data.get("description","")
+
+#         if  len(description) > int(MAX_QUERY_LENGTH):
+#             return jsonify({"content":"query limit exceed, keep context limit maximum of 2500 words."}), 200
+
+#         if len(chat_message) ==0 and  not is_valid_post_description(description):
+#             return jsonify({
+#                 "content": "Please provide a valid technical post description."
+#             }), 200
+
+#         # query = prompt.invoke({"description":description, "chat_history":chat_message})
+
+#         chat_message.append({"user":description})
+#         chain = prompt | model | StrOutputParser()
+#         result = chain.invoke({"description":description, "chat_history":chat_message}) 
+#         chat_message.append({"assistant":result})
+
+#         chat_message = chat_message[-MAX_HISTORY:]
+
+#         # print("chat history:", chat_message)
+#         return jsonify({"content":result}),200
+#     except Exception as e:
+#         print(f"error {str(e)}")
+#         return jsonify({"error":str(e)}), 500
+
+
+r = redis.Redis.from_url(os.getenv("REDIS_URL"), decode_responses=True)
+MAX_HISTORY = 6
+HISTORY_TTL = 60 * 10  # 10 min, tune as needed
+
+def get_history(tenant_id, author_id):
+    key = f"draftmate:history:{tenant_id}:{author_id}"
+    raw = r.get(key)
+    return json.loads(raw) if raw else []
+
+def save_history(tenant_id, author_id, history):
+    key = f"draftmate:history:{tenant_id}:{author_id}"
+    r.setex(key, HISTORY_TTL, json.dumps(history[-MAX_HISTORY:]))
+
+
 @app.route("/enhance-content", methods=['POST'])
 @limiter.limit("20 per minute")
 @token_required
 def generate_content():
-    global chat_message
     try:
         data = request.json
-        description = data.get("description","")
+        description = data.get("description", "")
 
-        if  len(description) > int(MAX_QUERY_LENGTH):
-            return jsonify({"content":"query limit exceed, keep context limit maximum of 2500 words."}), 200
+        # ASSUMPTION: token_required sets request.user = decoded JWT payload
+        # (adjust this one line if your middleware attaches it differently,
+        # e.g. g.user, request.decoded_token, etc.)
+        user = getattr(request, "user", None)
+        if not user:
+            return jsonify({"error": "unauthenticated"}), 401
 
-        if len(chat_message) ==0 and  not is_valid_post_description(description):
-            return jsonify({
-                "content": "Please provide a valid technical post description."
-            }), 200
+        author_id = user.get("authorId")
+        tenant_id = user.get("tenantId")
+        if not author_id or not tenant_id:
+            return jsonify({"error": "unauthenticated"}), 401
 
-        # query = prompt.invoke({"description":description, "chat_history":chat_message})
+        if len(description) > int(MAX_QUERY_LENGTH):
+            return jsonify({"content": "query limit exceed, keep context limit maximum of 2500 words."}), 200
 
-        chat_message.append({"user":description})
+        history = get_history(tenant_id, author_id)
+
+        if len(history) == 0 and not is_valid_post_description(description):
+            return jsonify({"content": "Please provide a valid technical post description."}), 200
+
+        history.append({"user": description})
         chain = prompt | model | StrOutputParser()
-        result = chain.invoke({"description":description, "chat_history":chat_message}) 
-        chat_message.append({"assistant":result})
+        result = chain.invoke({"description": description, "chat_history": history})
+        history.append({"assistant": result})
 
-        chat_message = chat_message[-MAX_HISTORY:]
+        save_history(tenant_id, author_id, history)
 
-        # print("chat history:", chat_message)
-        return jsonify({"content":result}),200
+        return jsonify({"content": result}), 200
     except Exception as e:
         print(f"error {str(e)}")
-        return jsonify({"error":str(e)}), 500
-
+        return jsonify({"error": str(e)}), 500
 
 if __name__ =="__main__":
     app.run(host="0.0.0.0", debug=False)
